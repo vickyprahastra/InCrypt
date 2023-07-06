@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-100">
+<html lang="en" class="h-100 bg-dark">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -90,29 +90,37 @@
         <p id="orTxt" class="lead">or</p>
         <br>
 
-        <!-- File Encryption -->
-        <h5 id="fileModTxt">File Mode</h5>
-        <input type="file" class="btn btn-primary" id="file" />
-        <br><br>
-        <div class="row">
-          <div class="col">
-            <a id="encryptFileBtn" onclick="encryptFile()" class="col btn btn-lg btn-secondary fw-bold border-white bg-white">Encrypt File</a>
+        <button class="btn btn-primary btn-sm" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          File Mode
+        </button>
+
+        <div class="collapse" id="collapseExample">
+          <!-- File Encryption -->
+          <h3 id="fileModTxt" class="pt-5">File Mode</h3>
+          <input type="file" class="btn btn-primary" id="file" />
+          <br><br>
+          <div class="row">
+            <div class="col">
+              <a id="encryptFileBtn" onclick="encryptFile()" class="col btn btn-lg btn-secondary fw-bold border-white bg-white">Encrypt File</a>
+            </div>
+            <div class="col">
+              <a id="decryptFileBtn" onclick="decryptFile()" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Decrypt File</a>
+            </div>
           </div>
-          <div class="col">
-            <a id="decryptFileBtn" onclick="decryptFile()" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Decrypt File</a>
-          </div>
+          <br>
         </div>
-        <br>
 
       </main>
 
       <!-- Footer -->
-      <footer class="mt-auto text-white-50">
-        <p><a id="gitLinkTxt">Take a look at the source code on</a> <a href="https://github.com/Tom60chat/InstantCrypt" class="text-white">GitHub</a>.</p>
-      </footer>
+      <!-- <footer class="mt-auto text-white-50"> -->
+      <!--   <p>Take a look at the source code on</p> -->
+      <!-- </footer> -->
 
     </div>
 
 
   </body>
+
+  <script src="./assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 </html>
