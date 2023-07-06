@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>InstantCrypt</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+
+    <!-- localization -->
+	  <link rel="localization" hreflang="fr" href="./assets/self/lang/fr.json" type="application/vnd.oftn.l10n+json"/>
+
+    <!-- CSS -->
+    <link href="./assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/self/css/cover.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    <!-- JS -->
+    <script type="text/javascript"  src="./assets/self/js/instantCrypt.js"></script>
+    <script type="text/javascript" src="./assets/crypto-js/crypto-js.js"></script>
+    <script type="text/javascript" src="./assets/self/js/i18n.js"></script>
+    <script type="text/javascript" src="./assets/self/js/localization.js"></script>
+
+  </head>
+
+
+  <body onload="loaded()" class="d-flex h-100 text-center text-white bg-dark">
+    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      
+      <!-- Header -->
+      <header class="mb-auto">
+        <div>
+          <h3 class="mb-0" id="headerTitleTxt">InstantCrypt</h3>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <main class="px-3">
+        
+        <h3 id="step1Txt">Step 1</h3>
+        <p class="lead" id="pwdNoticeTxt">Enter the encryption password</p>
+        <label id="encrypPwdTxt" class="form-label">Encryption password</label>          
+        <input type="password" class="form-control" id="inputPassword">
+        <br><br>
+
+        <h3 id="step2Txt">Step 2</h3>
+        <p id="cryptNoticeTxt" class="lead">Choose a option and click on Encrypt to download the encrypted version or Decrypt to download the decrypted version</p>
+        <br>
+
+        <!-- Text Encryption -->
+        <h5 id="txtModTxt">Text Mode</h5>
+        <div class="row">
+          <div class="col">
+            <textarea class="form-control" id="inputTxt"></textarea>
+          </div>
+          <div class="col">
+            <textarea class="form-control" id="outputTxt" readonly></textarea>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col">
+            <a id="encryptTxtBtn" onclick="encryptText()" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Encrypt Text</a>
+          </div>
+          <div class="col">
+            <a id="decryptTxtBtn" onclick="decryptText()" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Decrypt Text</a>
+          </div>
+        </div>
+        <br>
+        
+        <p id="orTxt" class="lead">or</p>
+        <br>
+        
+        <!-- File Encryption -->
+        <h5 id="fileModTxt">File Mode</h5>
+        <input type="file" class="btn btn-primary" id="file" />
+        <br><br>
+        <div class="row">
+          <div class="col">
+            <a id="encryptFileBtn" onclick="encryptFile()" class="col btn btn-lg btn-secondary fw-bold border-white bg-white">Encrypt File</a>
+          </div>
+          <div class="col">
+            <a id="decryptFileBtn" onclick="decryptFile()" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Decrypt File</a>
+          </div>
+        </div>
+        <br>
+
+      </main>
+
+      <!-- Footer -->
+      <footer class="mt-auto text-white-50">
+        <p><a id="gitLinkTxt">Take a look at the source code on</a> <a href="https://github.com/Tom60chat/InstantCrypt" class="text-white">GitHub</a>.</p>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
